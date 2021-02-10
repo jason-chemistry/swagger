@@ -2,7 +2,19 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
 <mapper namespace="com.test.api.mapper.UserMapper" >
-    <select id="getAll"  resultType="com.test.api.model.Admin">
-            select * from admin;
+
+
+    <select id="getAll"  resultType="com.test.api.model.User">
+        select RF.ReceiveDate as receiveData ,RF.CName as cName,RF.PatNo as patNo  ,RF.ID_Number_patient as idNumberPatient  ,RF.zdy4 as zdy4, DM.CName as deptName,ZDY7 as zdy7 from ReportForm RF
+        left join Department DM on RF.DeptNo=DM.DeptNo
+        where ReceiveDate between  #{0} and #{0} and sicktypeno='3' and zdy4 like '%新%'
+        order by RF.ReceiveDate
+     </select>
+
+    <select id="test"  resultType="java.lang.String">
+        select DM.CName as DeptName from ReportForm RF
+        left join Department DM on RF.DeptNo=DM.DeptNo
+        where ReceiveDate between  '2021-02-01' and '2021-02-01' and sicktypeno='3' and zdy4 like '%新%'
+        order by RF.ReceiveDate
      </select>
 </mapper>

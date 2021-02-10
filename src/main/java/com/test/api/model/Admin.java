@@ -1,113 +1,72 @@
 package com.test.api.model;
 
+import com.sun.org.apache.xpath.internal.operations.String;
+
 import java.sql.Timestamp;
 
 public class Admin {
-    private int id;
-    private String openId;
-    private String password;
-    private String adminName;
+    String ReceiveDate;
+    String CName;
+    String PatNo;
+    String  ID_Number_patient;
+    String  zdy4;
+//    String  DeptName;
+    String ZDY7;
 
-    private String contactsName;
-    private String phoneNumber;
-    private Timestamp createTime;
-    private Timestamp updateTime;
-    private String invitationCode;
-    private String delTime;
-
-    @Override
-    public String toString() {
-        return "Admin{" +
-                "id=" + id +
-                ", openId='" + openId + '\'' +
-                ", password='" + password + '\'' +
-                ", adminName='" + adminName + '\'' +
-                ", contactsName='" + contactsName + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", createTime=" + createTime +
-                ", updateTime=" + updateTime +
-                ", invitationCode='" + invitationCode + '\'' +
-                ", delTime='" + delTime + '\'' +
-                '}';
+    public String getReceiveDate() {
+        return ReceiveDate;
     }
 
-    public int getId() {
-        return id;
+    public void setReceiveDate(String receiveDate) {
+        ReceiveDate = receiveDate;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public String getCName() {
+        return CName;
     }
 
-    public String getOpenId() {
-        return openId;
+    public void setCName(String CName) {
+        this.CName = CName;
     }
 
-    public void setOpenId(String openId) {
-        this.openId = openId;
+    public String getPatNo() {
+        return PatNo;
     }
 
-    public String getPassword() {
-        return password;
+    public void setPatNo(String patNo) {
+        PatNo = patNo;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public String getID_Number_patient() {
+        return ID_Number_patient;
     }
 
-    public String getAdminName() {
-        return adminName;
+    public void setID_Number_patient(String ID_Number_patient) {
+        this.ID_Number_patient = ID_Number_patient;
     }
 
-    public void setAdminName(String adminName) {
-        this.adminName = adminName;
+    public String getZdy4() {
+        return zdy4;
     }
 
-    public String getContactsName() {
-        return contactsName;
+    public void setZdy4(String zdy4) {
+        this.zdy4 = zdy4;
     }
 
-    public void setContactsName(String contactsName) {
-        this.contactsName = contactsName;
+//    public String getDeptName() {
+//        return DeptName;
+//    }
+//
+//    public void setDeptName(String deptName) {
+//        DeptName = deptName;
+//    }
+
+    public String getZDY7() {
+        return ZDY7;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public Timestamp getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Timestamp createTime) {
-        this.createTime = createTime;
-    }
-
-    public Timestamp getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Timestamp updateTime) {
-        this.updateTime = updateTime;
-    }
-
-    public String getInvitationCode() {
-        return invitationCode;
-    }
-
-    public void setInvitationCode(String invitationCode) {
-        this.invitationCode = invitationCode;
-    }
-
-    public String getDelTime() {
-        return delTime;
-    }
-
-    public void setDelTime(String delTime) {
-        this.delTime = delTime;
+    public void setZDY7(String ZDY7) {
+        this.ZDY7 = ZDY7;
     }
 }
+
